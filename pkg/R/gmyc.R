@@ -650,7 +650,7 @@ function(tr, method = "single", interval = c(0, 5), quiet = FALSE) {
 	##PROGRAM ENTRY POINT##
 	#######################
 	##check if the input tree is appropriate
-	if (!is.ultrametric(tr)) {
+	if (!is.ultrametric(tr, tol=1e-6)) {
 		stop("Your ultrametric tree is not ultrametric, please check")
 	}
 	if (!is.binary.tree(tr)) {
